@@ -1,3 +1,245 @@
 /* Use your own code or past solution for Great Idea Web Page CSS here! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
 
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
 
+/* Set every element's box-sizing to border-box */
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: 'Titillium Web', sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Bangers', cursive;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+}
+
+/* Copy and paste your work from yesterday here and start to refactor into flexbox */
+.container {
+  margin: 0 auto;
+  width: 800px;
+}
+@media (max-width: 500px) {
+	.container {
+		margin: 0 auto;
+		width: 500px;
+	}
+}
+.head {
+		height: 20px;
+		display: flex;
+		align-items: center;
+		margin-top: 25px;
+	}
+	@media (max-width:800px) {
+		.head {
+			flex-direction: column;
+		}
+		.topMenu {
+			order: 1;
+		}
+	}
+	.topMenu {
+    display: flex;
+		align-items: center;
+	}
+	.topMenu a {
+    text-decoration: none;
+		color: lightgray;
+		margin: 20px;
+		padding: 10px;
+	}
+	@media (max-width: 800px) {
+		.topMenu a {
+			display: flex;
+			align-items: center;
+			margin: 10px 30px;
+		}
+	}
+	@media (max-width: 500px) {
+		.topMenu {
+			flex-direction: column;
+			border-top: 1px solid black;
+			width: 500px;
+			margin-top: 20px;
+			margin-bottom: 20px;
+		}
+		.topMenu a {
+			display: block;
+			width: 100%;
+			margin: 0;
+			border-bottom: 1px solid black;
+			width: 500px;
+			text-align: center;
+			padding: 20px;
+		}
+		.slogan .slogan-left {
+			margin-top: 300px;
+			padding-right: 40px;
+		}
+	}
+	.slogan-left {
+		font-size: 75px;
+		text-align: center;
+		line-height: 1;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		width: 450px;
+		margin-bottom: 0;
+	}
+	@media(max-width: 800px) {
+		.slogan-left {
+			margin: 0 auto;
+			padding-top: 25px;
+			padding-bottom: 25px;
+		}
+	}
+	.slogan-right {
+		display: inline-block;	
+		width: fit-content;
+	}
+	.slogan-photo {
+		height: 350px;
+		width: 350px;
+	}
+	@media(max-width:800px) {
+		.slogan-photo {
+			display: none;
+		}
+	}
+	.slogan {
+    display: flex;
+		width: 100%;
+		box-sizing: border-box;
+		margin: 20px;
+		padding: 25px;
+		margin-top: 50px;
+		height: auto;
+	}
+	button {
+    align-self: center;
+		justify-self: center;
+		background-color: white;
+		width: 150px;
+		height: 40px;
+		margin-top: 0;
+	}
+	.top-Previews {
+    display: inline-block;
+    border-top: 1px solid black;
+	}
+	.bottom-Previews {
+    border-bottom: 1px solid black;
+		padding: 15px;
+	}
+	article {
+    display: inline-block;
+    height: 50px;
+    width: 49%;
+		line-height: 1.4;
+		padding: 10px;
+	}	
+	@media (max-width: 500px) {
+		article {
+			width: 100%;
+			margin-top: 25px;
+		}
+	}
+	.photoBreak img {
+    margin: 15px;
+    width: 100%;
+	}
+	@media (max-width: 800px) {
+		.photoBreak img {
+			margin: 0 auto;
+			padding-left: 10px;
+			padding-right: 25px;
+			padding-top: 15px;
+		}
+	}
+	.bottom-Previews article {
+    padding: 10px;
+    width: 33%;
+    padding: 5px;
+	}
+	@media (max-width: 500px) {
+		.bottom-Previews {
+			padding-bottom: 25px;
+		}
+		.bottom-Previews article {
+			width: 100%;
+			margin-top: 25px;
+		}
+	}
+	address {
+    margin-top: 20px;
+		display: inline-block;
+		line-height: 1.2;
+	}
+	@media (max-width: 800px) {
+		address {
+			margin-left: 15px;
+		}
+	}
+	.street p {
+    line-height: 1;
+	}
+	#cite {
+    text-align: center;
+  }
+ 
+  
+  
+  
+  
